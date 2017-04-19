@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'PayPlusSDK'
-  s.version      = '1.0.0'
+  s.version      = '1.0.1'
   s.summary      = 'PayPlusSDK'
   s.description  = <<-DESC
                               PayPlusSDK是由金麦众合提供的聚合支付客户端一站式的集成解决方案，
