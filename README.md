@@ -41,7 +41,7 @@
        pod 'PayPlusSDK', '~> 1.0.0'         //根据需要添加实际版本
        pod 'PayPlusSDK/Wxpay’, '~> 1.0.0'   //根据需要添加实际版本
     (2)如果您当前同时使用了微信和支付宝的支付功能，那么需要在您的podfile中同时配置如下
-       pod 'PayPlusSDK', '~> 1.0.0'         //根据需要添加实际版本
+       pod 'PayPlusSDK', '~> 1.0.0'         //根据需要添加实际版本
        pod 'PayPlusSDK/Alipay’, '~> 1.0.0'  //根据需要添加实际版本
        pod 'PayPlusSDK/Wxpay’, '~> 1.0.0'   //根据需要添加实际版本
 ## <7> 关于支付过程中App非正常退出的回调问题，SDK提供的支持机制是: 
