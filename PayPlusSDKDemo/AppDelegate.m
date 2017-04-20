@@ -87,6 +87,7 @@
     
     NSLog(@"调用第三方处理成功回调【iOS8】");
     NSLog(@"%@",url.absoluteString);
+    //此处代码必须实现，如果不实现则无法进行支付回调处理
     return [PayPlusCore PayPlusCoreHandleOpenURL:url withCompletion:^(NSString *result, PayPlusError *error) {
         NSLog(@"iOS8 | result = %@",result);
         NSLog(@"iOS8 | errorCode = %lu",(unsigned long)error.errorChannalCode);
@@ -129,6 +130,7 @@
     if ([url.absoluteString rangeOfString:@"://safepay"].location != NSNotFound ) {
         NSLog(@"调用第三方处理成功回调【iOS9】");
         NSLog(@"%@",url.absoluteString);
+        //此处代码必须实现，如果不实现则无法进行支付回调处理
         return [PayPlusCore PayPlusCoreHandleOpenURL:url withCompletion:^(NSString *result, PayPlusError *error) {
             NSLog(@"iOS9 | result = %@",result);
             NSLog(@"iOS9 |errorCode = %lu",(unsigned long)error.errorChannalCode);          //错误码请前往PayPlusCore.h查找枚举说明

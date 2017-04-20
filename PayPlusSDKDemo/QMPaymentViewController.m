@@ -256,11 +256,11 @@
         return;
     }
     
-    
+    //1. 用户去自己的商户后台下单
     NSString *strAmount = self.tfPayAmount.text;
     NSString *strChannal = self.selectedRowCha == 0 ? @"WECHATSDK" : @"ALIPAYSDK";
     NSString *strEnviroment = self.selectedRowEnv == 0 ? @"qa" : @"product";
-    NSString *urlString = @"http://172.17.102.190:8014";
+    NSString *urlString = @"http://172.17.102.190:8014";        //用户自己的后台下单地址
     urlString = [urlString stringByAppendingFormat:@"/cashier-test/test/appPayPreparePay?env=%@&orderAmount=%@&payTool=%@",strEnviroment,strAmount,strChannal];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -277,7 +277,8 @@
         if ([responseObject objectForKey:@"payCharge"] &&
             [responseObject objectForKey:@"payChannal"]){
             
-            NSString *appScheme = @"ypXinChouBao";
+            //2. 下单完毕之后，自己唤醒支付工具进行支付(一行代码进行支付操作)
+            NSString *appScheme = @"appscheme";
             [PayPlusCore PayPlusCoreStartToPayWithCharge:responseObject viewController:self appURLScheme:appScheme completionBlock:^(NSString *result, PayPlusError *error) {
                 NSLog(@"ali | result = %@",result);
                 NSLog(@"ali | errorCode = %lu",(unsigned long)error.errorChannalCode);
