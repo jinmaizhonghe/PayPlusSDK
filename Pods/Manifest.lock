@@ -14,13 +14,24 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - PayPlusSDK (1.0.0):
+    - PayPlusSDK/Core (= 1.0.0)
+  - PayPlusSDK/Alipay (1.0.0):
+    - PayPlusSDK/Core
+  - PayPlusSDK/Core (1.0.0)
+  - PayPlusSDK/Wxpay (1.0.0):
+    - PayPlusSDK/Core
 
 DEPENDENCIES:
   - AFNetworking
+  - PayPlusSDK (~> 1.0.0)
+  - PayPlusSDK/Alipay (~> 1.0.0)
+  - PayPlusSDK/Wxpay (~> 1.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  PayPlusSDK: 22b9946271797cc72cf67f20391059e24f425bf5
 
-PODFILE CHECKSUM: 854e10467e8b2221cac376b957dca341205c2f61
+PODFILE CHECKSUM: 4b3a3b36c6a8627af72a9b024e61bc01a18f2c3d
 
 COCOAPODS: 1.1.1

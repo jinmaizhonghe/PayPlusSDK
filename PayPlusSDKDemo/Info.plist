@@ -37,7 +37,7 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wx95f2b24daf623397[请替换成你自己申请的id]</string>
+				<string>wx95f2b27daf603354</string>
 			</array>
 		</dict>
 	</array>

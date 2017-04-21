@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [WXApi registerApp:@"wx95f2b27daf603387"];
+    [WXApi registerApp:@"wx95f2b27daf603354"];                      //修改成为您自己在微信平台生成的APPID
     UIScreen *screen  = [UIScreen mainScreen];
     UIWindow *window = [[UIWindow alloc] initWithFrame:screen.bounds];
     QMPaymentViewController *viewController = [[QMPaymentViewController alloc] init];

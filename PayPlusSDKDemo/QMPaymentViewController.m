@@ -280,8 +280,8 @@
             //2. 下单完毕之后，自己唤醒支付工具进行支付(一行代码进行支付操作)
             NSString *appScheme = @"appscheme";
             [PayPlusCore PayPlusCoreStartToPayWithCharge:responseObject viewController:self appURLScheme:appScheme completionBlock:^(NSString *result, PayPlusError *error) {
-                NSLog(@"ali | result = %@",result);
-                NSLog(@"ali | errorCode = %lu",(unsigned long)error.errorChannalCode);
+                NSLog(@"tool | result = %@",result);
+                NSLog(@"tool | errorCode = %lu",(unsigned long)error.errorChannalCode);
                 if ([result isEqualToString:@"success"]) {
                     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"支付成功" message:@"您的订单支付成功." delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
                     [alert show];
